@@ -60,7 +60,28 @@ SQL> SELECT CON_ID, TABLESPACE_NAME, FILE_NAME
 no rows selected
 
 SQL>
+SQL> CREATE PLUGGABLE DATABASE PDB3
+  2  ADMIN USER ra_plsqlauca IDENTIFIED BY ray2512
+  3  FILE_NAME_CONVERT = ('E:\oracle19cdata\ORACLE19CDB\pdbseed\',
+  4                       'E:\oracle19cdata\ORACLE19CDB\oracle19dbcpdb\PDB2\');
+CREATE PLUGGABLE DATABASE PDB3
+*
+ERROR at line 1:
+ORA-65005: missing or invalid file name pattern for file -
+C:\USERS\MWAMBA\DOWNLOADS\ORADATA\ORCL\PDBSEED\SYSTEM01.DBF
 
+
+SQL> CREATE PLUGGABLE DATABASE PDB2.pdb
+  2  ADMIN USER ra_plsqlauca IDENTIFIED BY ray2512
+  3  FILE_NAME_CONVERT = ('E:\oracle19cdata\ORACLE19CDB\pdbseed\',
+  4                       'E:\oracle19cdata\ORACLE19CDB\oracle19dbcpdb\PDB2\');
+CREATE PLUGGABLE DATABASE PDB2.pdb
+                              *
+ERROR at line 1:
+ORA-00922: missing or invalid option
+
+
+SQL>
 
 
 
