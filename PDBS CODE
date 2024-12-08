@@ -1,0 +1,117 @@
+Microsoft Windows [Version 10.0.19045.5198]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Mwamba>sqlplus sys as SYSDBA
+
+SQL*Plus: Release 19.0.0.0.0 - Production on Sun Dec 8 18:51:59 2024
+Version 19.3.0.0.0
+
+Copyright (c) 1982, 2019, Oracle.  All rights reserved.
+
+Enter password:
+
+Connected to:
+Oracle Database 19c Enterprise Edition Release 19.0.0.0.0 - Production
+Version 19.3.0.0.0
+
+SQL> show user;
+USER is "SYS"
+SQL>
+SQL> SELECT instance_name FROM v$instance;
+
+INSTANCE_NAME
+----------------
+orcl
+
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 ORCLPDB                        MOUNTED
+SQL> SELECT CON_ID, TABLESPACE_NAME, FILE_NAME
+  2  FROM CDB_DATA_FILES
+  3  WHERE CON_ID = 3;
+
+no rows selected
+
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 ORCLPDB                        MOUNTED
+SQL> SELECT CON_ID, TABLESPACE_NAME, FILE_NAME
+  2  FROM CDB_DATA_FILES
+  3  WHERE CON_ID = 3;
+
+no rows selected
+
+SQL> show pdbs;
+
+    CON_ID CON_NAME                       OPEN MODE  RESTRICTED
+---------- ------------------------------ ---------- ----------
+         2 PDB$SEED                       READ ONLY  NO
+         3 ORCLPDB                        MOUNTED
+SQL> SELECT CON_ID, TABLESPACE_NAME, FILE_NAME
+  2  FROM CDB_DATA_FILES
+  3  WHERE CON_ID = 2;
+
+no rows selected
+
+SQL>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
